@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>正/倒计时</title>
+	<meta name="viewport" content="maximum-scale=3, minimum-scale=1, width=320, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<!--STYLE_PLACEHOLDER-->
+</head>
+<body>
+<div id="num">0</div>
+<button id="pause">pause</button>
+<button id="goon">goon</button>
+<button id="reset">reset</button>
+
+<script src="../../mod/mod.js"></script>
+<!--RESOURCEMAP_PLACEHOLDER-->
+<!--SCRIPT_PLACEHOLDER-->
+<script>
+	var $ = require('Zepto');
+	var countdown = require('countdown');
+	
+	var $num = $('#num');
+	var $pause = $('#pause');
+	var $goon = $('#goon');
+	var $reset = $('#reset');
+	var count = countdown({
+		interval: 10,
+		step: 0.01,
+		total: 10,
+		toward: 1,
+		intervalCallback: function(cur){
+			$num.text(cur.toFixed(2));
+		},
+		callback: function(num){
+			$num.text(num.toFixed(2) + '   stopped!');
+		}
+	});
+
+	$pause.click(function(){
+		count.stop();
+	});
+	$goon.click(function(){
+		count.continue();
+	});
+	$reset.click(function(){
+		count.reset();
+		$num.text(0);
+	});
+</script>
+</body>
+</html>
