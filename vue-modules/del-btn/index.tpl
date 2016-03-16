@@ -1,0 +1,1 @@
+<div v-on="click: val = ''" v-show="val != ''" class="ipt-del-btn"></div>

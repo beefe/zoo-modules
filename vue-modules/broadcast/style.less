@@ -1,0 +1,65 @@
+@-webkit-keyframes broadcast {
+	0% {
+		-webkit-transform: translateX(640/2/64rem);
+		transform: translateX(640/2/64rem);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 1;
+	}
+}
+
+.broadcast-content {
+	position: absolute;
+	white-space: nowrap;
+	opacity: 0;
+}
+
+.friend-broadcast-wrapper {
+	position: relative;
+	height: 30/64rem;
+	margin-bottom: 20/64rem;
+	padding: 30/64rem 20/64rem;
+
+	.icon-l {
+		float: left;
+		width: 35/64rem;
+		height: 30/64rem;
+		background-image: url(../../images/icon_wealth_news.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: 25/64rem;
+	}
+
+	.icon-r {
+		float: right;
+		width: 30/64rem;
+		height: 30/64rem;
+		background-image: url(../../images/201510141543.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 18/64rem;
+	}
+}
+
+.friend-broadcast-box {
+	position: absolute;
+	left: (35+20)/64rem;
+	right: (30+20)/64rem;
+	height: 30/64rem;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 30/64rem;
+	font-size: 24/64rem;
+	color: #585858;
+}
+
+
+
+
+
+
+
+
